@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Almario Analytics | Home</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* General Styling */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Sticky Navigation Bar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1a1a1a;
+      padding: 1rem 2rem;
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .logo span {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #eb6a20;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+    }
+
+    .nav-links li a.active {
+      color: #f05454;
+    }
+
+    /* Mobile Menu */
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #1a1a1a;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        padding: 1rem 2rem;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    /* Hero Section Styling */
+    .hero {
+      position: relative;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      height: 100vh;
+      color: #fff;
+      background: url('/images/Data_problem.png') no-repeat center center/cover;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 100%;
+      padding: 2rem;
+      text-align: left;
+    }
+
+    .company-name {
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-heading {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: hsl(9, 72%, 66%);
+      margin-bottom: 1rem;
+    }
+
+    .hero-description {
+      font-size: 0.8rem;
+      line-height: 1.2;
+	  max-width: 100%;
+      margin-top: 0.8rem;
+    }
+
+    /* Mobile Adjustments */
+    @media (max-width: 768px) {
+      .hero-content {
+        max-width: 90%;
+        padding: 2rem;
+        padding-top: 5rem; /* Space below header */
+      }
+
+      .hero-heading {
+        font-size: 2rem;
+      }
+    }
+
+    /* Add space below the Hero Section to avoid overlapping */
+    .hero + .skills-section {
+      padding-top: 2rem;
+    }
+
+    /* Skills Section Styling */
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .skill-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      background-color: #221c1c;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .skill-logo {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 0.5rem;
+    }
+
+    .skills-section {
+      padding: 2rem;
+      background-color: rgb(8, 7, 7);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">
+      <span>Almario Analytics</span>
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </nav>
+
+<!-- Hero Section -->
+<section class="hero">
+	<div class="projects-card" style="
+	  background-image: url('images/dataaa.png');
+	  background-size: cover;
+	  background-position: center;
+	  width: 95%;
+	  height: auto;
+	  position: absolute;
+	  top: 0;
+	  left: 50%;
+	  transform: translateX(-50%);
+	  z-index: -1;
+	"></div>
+	
+	<div class="hero-content">
+	  <p class="company-name">Data Science & Analytics</p>
+	  <h1 class="hero-heading">They say, "data is the new oil, but mining it is what makes it more valuable."</h1>
+	  <p class="hero-description"><em>
+		Explore a curated collection of data projects that showcase my expertise in transforming raw data into actionable insights, from predictive modeling and stock analytics to A/B testing and inventory analytics.
+	  </em></p>
+	</div>
+  </section>
+  
+
+  <!-- Skills Section -->
+<section class="skills-section">
+  <h3 style="color:  hsl(9, 72%, 66%);">Technologies I am Proficient At</h3>
+    <div class="skills-container">
+      <div class="skill-card">
+        <img src="images/python logo.webp" alt="Python Logo" class="skill-logo" />
+        <p>Python</p>
+      </div>
+      <div class="skill-card">
+        <img src="images/azure-sql-database-logo.png" alt="SQL Logo" class="skill-logo" />
+        <p>SQL</p>
+      </div>
+      <div class="skill-card">
+        <img src="images/r-logo.jpeg" alt="R Logo" class="skill-logo" />
+        <p>R</p>
+      </div>
+      <div class="skill-card">
+        <img src="images/ms excel logoo.jpg" alt="Excel Logo" class="skill-logo" />
+        <p>Excel</p>
+      </div>
+      <div class="skill-card">
+        <img src="images/machine learning logo transparent.png" alt="Machine Learning Logo" class="skill-logo" />
+        <p>Machine Learning</p>
+      </div>
+      <div class="skill-card">
+        <img src="images/New_Power_BI_Logo.svg.png" alt="R Logo" class="skill-logo" />
+        <p>Power BI</p>
+      </div>
+	  <div class="skill-card">
+        <img src="images/tableau_logo.png" alt="R Logo" class="skill-logo" />
+        <p>Tableau</p>
+      </div>
+    </div>
+
+</section>
+
+<!-- HTML -->
+<section class="projects-section">
+	<div class="projects-header">
+	  <h2>Projects</h2>
+	  <a href="https://sammiebarasa77.github.io/sam-barasa-web.github.io/" class="view-all">View All →</a>
+	</div>
+	<div class="insights-grid">
+	  <div href="https://github.com/SammieBarasa77/SammieBarasa" class="projects-card" style="background-image: url('image1.jpg');">
+		<a href="https://github.com/SammieBarasa77/SammieBarasa" target="_blank">
+			<img src="images/sales_pic.webp" alt="Picture" >
+			<div class="card-overlay">
+			  <p><b>Superstore Product Sales Analytics</b> </br>
+				Optimizing product sales strategies by uncovering key trends and insights through comprehensive data analysis.</p>
+			</div>
+		</a>
+	  </div>
+	  <div href="https://github.com/SammieBarasa77/ab_testing" class="projects-card" style="background-image: url('image2.jpg');">
+		<a href="https://github.com/SammieBarasa77/ab_testing" target="_blank">
+			<img src="images/digital_mkt.jpeg" alt="Picture" >
+			<div class="card-overlay">
+			  <p><b>A/B Testing on Digital Marketing Channels</b></br>
+				Enhancing marketing effectiveness by rigorously testing and identifying the best performing digital strategies.</p>
+			</div>
+		</a>
+	  </div>
+	  <div href="https://github.com/SammieBarasa77/stock_analysis" class="projects-card" style="background-image: url('image3.jpg');">
+		<a href="https://github.com/SammieBarasa77/stock_analysis" target="_blank">
+			<img src="images/stock_analysis.png" alt="Picture" >
+			<div class="card-overlay">
+			  <p><b>Amazon Stock Data Analysis</b> </br> 
+				Leveraging stock data to provide actionable market insights, driving informed investment decisions.</p>
+			</div>
+		</a>
+	  </div>
+	  <div href="https://github.com/SammieBarasa77/bank_churn" class="projects-card" style="background-image: url('image4.jpg');">
+		<a href="https://github.com/SammieBarasa77/bank_churn" target="_blank">
+			<img src="images/bank_image.webp" alt="Picture" >
+			<div class="card-overlay">
+			  <p><b>Bank Customer Churn Analysis</b> </br>
+				Mitigates customer churn by analyzing data to identify at-risk clients and develop targeted retention strategies.</p>
+			</div>
+		</a>
+	  </div>
+	  <div href="https://github.com/SammieBarasa77/car_sales" class="projects-card" style="background-image: url('image4.jpg');">
+		<a href="https://github.com/SammieBarasa77/car_sales" target="_blank">
+			<img src="images/sports-cars-collection-wallpaper-mercedes_970779-1401.avif" alt="Picture" >
+			<div class="card-overlay">
+			  <p><b>Car Sales Analysis and Prediction</b> </br>
+				Boosting car sales forecasting accuracy with predictive models and actionable sales insights.</p>
+			</div>
+		</a>
+	  </div>
+	  <div href="https://github.com/SammieBarasa77/inventory" class="projects-card" style="background-image: url('image4.jpg');">
+		<a href="https://github.com/SammieBarasa77/inventory" target="_blank">
+			<img src="images/inventry.png" alt="Picture" >
+			<div class="card-overlay">
+			  <p><b>Inventory Management Analysis</b> </br>
+				 Streamlining inventory processes and reduced costs by pinpointing inefficiencies through detailed data analysis.</p>
+			</div>
+		</a>
+	  </div>
+	</div>
+</section>
+
+  
+  <style>
+  /* General Section Styling */
+  .projects-section {
+	background-color: #1a1a1a;
+	padding: 2rem;
+	color: #ffffff;
+	font-family: Arial, sans-serif;
+  }
+  
+  .projects-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1.5rem;
+  }
+  
+  .projects-header h2 {
+	font-size: 2rem;
+	color: hsl(9, 72%, 66%);
+  }
+  
+  .view-all {
+	text-decoration: none;
+	color: hsl(9, 72%, 66%);
+	font-size: 1rem;
+  }
+  
+  /* Grid Layout for Cards */
+  .insights-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.5rem; /* Add spacing between cards */
+  }
+  
+  @media (max-width: 1024px) {
+	.insights-grid {
+	  grid-template-columns: repeat(2, 1fr);
+	}
+  }
+  
+  @media (max-width: 768px) {
+	.insights-grid {
+	  grid-template-columns: 1fr;
+	}
+  }
+  
+  /* Styling for Project Cards */
+  .projects-card {
+	position: relative;
+	background-size: cover; /* Ensures the image covers the card */
+	background-position: center;
+	height: 300px; /* Adjust height for better proportions */
+	border: 1px solid rgba(255, 255, 255, 0.2); /* Add defined borders */
+	border-radius: 8px; /* Rounded corners */
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for better separation */
+	overflow: hidden;
+	cursor: pointer;
+  }
+  
+  .projects-card::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.4); /* Dark overlay for better text readability */
+	transition: background 0.3s ease;
+  }
+  
+  .projects-card:hover::before {
+	background: rgba(255, 84, 84, 0.6); /* Highlight effect on hover */
+  }
+  
+  /* Overlay for Text */
+  .card-overlay {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 1rem;
+	background: rgba(0, 0, 0, 0.7); /* Slightly transparent background for text */
+	color: #fff;
+	z-index: 1;
+	text-align: center;
+  }
+  
+  .card-overlay p {
+	margin: 0;
+	font-size: 1rem;
+	line-height: 1.5;
+  }
+  </style>
+  
+   
+  <section class="services-section">
+	<div class="services-header">
+	  <h2>My Products & <span>Services </span></h2>
+	  <p>
+		I excel at converting raw data into meaningful insights that inform decisions, leveraging my expertise to solve problems and reveal hidden data trends.
+	  </p>
+	</div>
+	<div class="services-list">
+	  <div class="service-item">
+		<div class="service-title">
+		  <span>+</span> Sales Forecasting
+		</div>
+		<div class="service-content">
+		  <p><b>How value is added</b></br>
+			By leveraging predictive analytics, you help clients accurately forecast sales trends, enabling them to make informed decisions about inventory management, budgeting, and marketing strategies. Your models assist in identifying seasonal demand patterns and potential risks, empowering businesses to stay ahead of market fluctuations. </br>
+			<b>Challenges Without This Service</b></br>
+            Without reliable sales forecasting, businesses often face overstocking or understocking issues, leading to lost sales opportunities, increased holding costs, and customer dissatisfaction. They may also struggle to allocate resources effectively, resulting in missed revenue growth opportunities.
+		  </p>
+		</div>
+	  </div>
+	  <div class="service-item">
+		<div class="service-title">
+		  <span>+</span> Employee Performance Analysis
+		</div>
+		<div class="service-content">
+			<p><b>How value is added</b></br>
+				Your analysis identifies key performance indicators (KPIs), tracks employee contributions, and highlights areas for improvement. By combining quantitative metrics with insights into organizational dynamics, you help clients enhance productivity, identify high performers, and address challenges that hinder workforce efficiency. </br>
+				<b>Challenges Without This Service</b></br>
+				Without robust performance analysis, businesses may struggle with underperforming teams, high turnover rates, and a lack of clear direction for employee development. This can lead to stagnation, decreased morale, and increased operational inefficiencies.
+			  </p>
+		</div>
+	  </div>
+	  <div class="service-item">
+		<div class="service-title">
+		  <span>+</span> Market Basket Analysis
+		</div>
+		<div class="service-content">
+			<p><b>How value is added</b></br>
+				You help clients uncover hidden patterns in customer purchasing behaviors, enabling them to design targeted promotions, optimize product placements, and increase cross-sell and upsell opportunities. Your insights help businesses better understand customer preferences and maximize profitability per transaction. </br>
+				<b>Challenges Without This Service</b></br>
+				Without market basket analysis, businesses miss out on understanding product associations, resulting in lost cross-selling opportunities and suboptimal product bundling strategies. This can lead to a failure to capitalize on customer purchasing habits and decreased revenue potential.
+			  </p>
+		</div>
+	  </div>
+	  <div class="service-item">
+		<div class="service-title">
+		  <span>+</span> Interaction Dashboards
+		</div>
+		<div class="service-content">
+			<p><b>How value is added</b></br>
+				By designing user-friendly dashboards, you provide clients with real-time, actionable insights into their operations. These dashboards simplify complex datasets, offering clear visualizations that facilitate better decision-making and quick identification of trends or anomalies.</br>
+				<b>Challenges Without This Service</b></br>
+				Without interactive dashboards, decision-makers often rely on static reports that lack real-time insights. This can lead to delayed decisions, inefficient processes, and a lack of agility in responding to emerging challenges or opportunities.
+			  </p>
+		</div>
+	  </div>
+	  <div class="service-item">
+		<div class="service-title">
+		  <span>+</span> Customer Analytics
+		</div>
+		<div class="service-content">
+			<p><b>How value is added</b></br>
+				You empower clients with data-driven insights into customer behavior, preferences, and loyalty patterns. By segmenting customer data and identifying trends, you help businesses improve retention, design personalized experiences, and target marketing efforts effectively. </br>
+				<b>Challenges Without This Service</b></br>
+				Without customer analytics, businesses risk losing valuable customers to competitors due to poor understanding of their needs. This results in ineffective marketing campaigns, high churn rates, and missed opportunities for improving customer satisfaction and loyalty.
+			  </p>
+		</div>
+	  </div>
+	  <div class="service-item">
+		<div class="service-title">
+		  <span>+</span> Supply Chain Optimization
+		</div>
+		<div class="service-content">
+			<p><b>How value is added</b></br>
+				Your solutions streamline supply chain processes by analyzing data on inventory, logistics, and supplier performance. You help businesses reduce costs, minimize delays, and improve efficiency across the supply chain, ensuring smooth operations and better customer service.</br>
+				<b>Challenges Without This Service</b></br>
+				Without supply chain optimization, businesses face inefficiencies such as delayed deliveries, increased operational costs, and lost revenue due to supply disruptions. This can damage brand reputation and erode customer trust.
+			  </p>
+		</div>
+	  </div>
+	</div>
+  </section>
+  <style>
+	/* CSS */
+.services-section {
+  background-color: #1a1a1a;
+  padding: 2rem;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.services-header h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: hsl(9, 72%, 66%);
+}
+
+.services-header h2 span {
+  color: hsl(9, 72%, 66%);
+}
+
+.services-header p {
+  font-size: 1rem;
+  color: #b0b0b0;
+  margin-bottom: 2rem;
+}
+
+.services-list {
+  display: inline-block;
+  width: 75%; /* Adjusted width */
+  border: 1px solid hsl(9, 72%, 66%);
+  border-radius: 8px;
+  background-color: #2a2a2a;
+}
+
+.service-item {
+  border-top: 1px solid #444;
+}
+
+.service-item:first-child {
+  border-top: none;
+}
+
+.service-title {
+  padding: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+.service-title span {
+  color: hsl(9, 72%, 66%);
+  font-weight: bold;
+}
+
+.service-title.active {
+  background-color: hsl(9, 72%, 66%);
+}
+
+.service-content {
+  display: none;
+  padding: 1rem;
+  background-color: #1a1a1a;
+  font-size: 0.9rem;
+  color: #b0b0b0;
+  text-align: left;
+}
+
+.service-item .service-content.active {
+  display: block;
+}
+
+</style>  
+<script>
+document.querySelectorAll('.service-title').forEach((title) => {
+	title.addEventListener('click', function () {
+	  const content = this.nextElementSibling;
+	  const icon = this.querySelector('span');
+	  
+	  // Toggle the active class for the clicked item
+	  content.classList.toggle('active');
+	  this.classList.toggle('active');
+	  
+	  // Change the '+' to '-' when expanded and vice versa
+	  icon.textContent = content.classList.contains('active') ? '−' : '+';
+	  
+	  // Collapse other open descriptions
+	  document.querySelectorAll('.service-content').forEach((item) => {
+		if (item !== content && item.classList.contains('active')) {
+		  item.classList.remove('active');
+		  item.previousElementSibling.classList.remove('active');
+		  item.previousElementSibling.querySelector('span').textContent = '+';
+		}
+	  });
+	});
+  });
+  
+</script>
+  </section>
+
+ 
+<!-- About Section -->
+<section class="about">
+  <div class="about-container">
+    <!-- About Us Card -->
+    <div class="about-box">
+      <h2>About <span>Me</span></h2>
+      <p>
+		I’m Samuel Barasa, a data analyst passionate about transforming raw data into impactful business solutions. By harnessing the power of data cleaning, predictive modeling, and visualization, I uncover meaningful trends that fuel strategic growth. My portfolio highlights innovative projects tailored to solve real-world challenges, whether it’s crafting predictive sales models, analyzing product performance, or creating interactive dashboards that turn complex data into actionable strategies. If your goal is to boost customer retention, streamline operations, or optimize sales, I’m here to deliver the insights that propel your business forward.</br>
+		
+		Thank you for visiting, and I look forward to connecting with you.
+      </p>
+    </div>
+
+    <!-- Potential Clients Card -->
+    <div class="about-box">
+      <h2>Potential <span>Clients</span></h2>
+      <p>
+        <b>Retail Businesses, Marketing Agencies, Manufacturing Companies, Financial Institutions, E-commerce Companies, Automotive Industry, Government and Public Sector.</b><br>
+        By leveraging advanced data analytics techniques, I provide customized insights and solutions that optimize operations, enhance customer satisfaction, and drive strategic decision-making. My services help businesses across various sectors identify inefficiencies, uncover market trends, and enhance overall performance, leading to increased profitability and competitive advantage.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* About Section Styles */
+  .about {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+
+  .about-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .about-box {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1.5rem;
+    flex: 1;
+    max-width: 48%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .about-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .about-box h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #222;
+  }
+
+  .about-box h2 span {
+    color: hsl(9, 72%, 66%);
+  }
+
+  .about-box p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
+    }
+
+    .about-box {
+      max-width: 100%;
+    }
+  }
+</style>
+
+</section>
+
+<!-- Contact Section -->
+<section class="contact">
+	<div class="contact-container">
+	  <!-- Contact Text -->
+	  <div class="contact-text">
+		<h2>Every business transaction between two parties begins with a conversation.</h2>
+		<p>
+		  Feel free to drop a message about how I would leverage data expertise to help you optimize your business! I’ll get back to you promptly.</br>
+		</p>
+	  </div>
+  
+	  <!-- Contact Form -->
+	  <div class="contact-form">
+		<form 
+		  action="https://formspree.io/f/xwpkddgd" 
+		  method="POST" 
+		  id="contact-form">
+		  <label for="name">Name<span>*</span></label>
+		  <input type="text" id="name" name="name" placeholder="Your Name" required>
+  
+		  <label for="email">Email<span>*</span></label>
+		  <input type="email" id="email" name="email" placeholder="Your Email" required>
+  
+		  <label for="message">Message</label>
+		  <textarea id="message" name="message" placeholder="Your Message"></textarea>
+  
+		  <div class="captcha">
+			<!-- Placeholder for reCAPTCHA -->
+			<label>
+			  <input type="checkbox" required> I’m not a robot
+			</label>
+		  </div>
+  
+		  <button type="submit" class="btn">Send Message</button>
+		</form>
+	  </div>
+	</div>
+  </section>
+  
+  <script>
+	// Clear form fields after successful submission
+	document.getElementById("contact-form").addEventListener("submit", function (e) {
+	  e.preventDefault(); // Prevent default submission for testing
+	  const form = e.target;
+  
+	  // Simulate successful submission
+	  alert("Message sent successfully!");
+  
+	  // Clear the form fields
+	  form.reset();
+	});
+  </script>
+
+    <style>
+		/* Contact Section Styles */
+.contact {
+  background-color: #111;
+  color: #110e0e;
+  padding: 3rem 2rem;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap; /* Allow items to wrap for smaller screens */
+}
+
+.contact-text {
+  flex: 1;
+  max-width: 48%; /* Limit width on larger screens */
+}
+
+.contact-text h2 {
+  font-size: 2.0rem;
+  color: hsl(9, 72%, 66%);
+  margin-bottom: 1rem;
+}
+
+.contact-text p {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.contact-form {
+  flex: 1;
+  max-width: 48%; /* Limit width on larger screens */
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-bottom: 0.5rem;
+  color: #ccc;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background-color: #222;
+  border: 1px solid #444;
+  border-radius: 5px;
+  padding: 0.8rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  height: 150px;
+  resize: none;
+}
+
+.contact-form .captcha {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.contact-form .btn {
+  padding: 0.8rem;
+  background-color: hsl(9, 72%, 66%);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form .btn:hover {
+  background-color: #b45c4a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .contact-text,
+  .contact-form {
+    max-width: 100%; /* Full width on smaller screens */
+  }
+
+  .contact-text {
+    margin-bottom: 2rem; /* Add spacing between text and form */
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 95%; /* Occupy most of the screen width */
+  }
+}
+
+	</style>
+
+
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      background-color: #222; /* Dark background */
+      color: #fff; /* White text */
+    }
+
+    /* Navigation Bar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      padding: 1rem 2rem;
+    }
+
+    .navbar .logo span {
+      font-size: 1.5rem;
+      font-style: italic;
+      font-weight: bold;
+      color: hsl(9, 72%, 66%); /* Orange color */
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links li {
+      display: inline;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .nav-links a.active,
+    .nav-links a:hover {
+      color: hsl(9, 72%, 66%); /* Match the logo color */
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 3rem 2rem;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #fff;
+      line-height: 1.3;
+    }
+
+    .hero-image img {
+      max-width: 100%;
+      border-radius: 1rem;
+      border: 5px solid hsl(9, 72%, 66%); /* Match the logo color */
+    }
+
+    /* About Section */
+    .about {
+      padding: 3rem 2rem;
+      background-color: #111; /* Matches the site theme */
+      color: #fff;
+    }
+
+    .about-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .about-box {
+      flex: 1;
+      padding: 1.5rem;
+      background-color: #1a1a1a; /* Slightly lighter for contrast */
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .about-box h2 {
+      font-size: 2rem;
+      color: hsl(9, 72%, 66%); /* Accent color */
+      margin-bottom: 1rem;
+    }
+
+    .about-box h2 span {
+      color: #fff; /* White for the secondary word */
+    }
+
+    .about-box p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #ccc; /* Light gray for text */
+    }
+
+
+  </style>
+
+<!-- Signature Section -->
+<section class="signature">
+	<h1>Samuel Almario Barasa</h1>
+  </section>
+
+    <style>
+		/* Signature Section Styles */
+.signature {
+  background-color: #000; /* Black background for contrast */
+  color: #fff; /* White text */
+  text-align: center; /* Center the text horizontally */
+  padding: 2rem 0; /* Add padding to give space around the text */
+  font-family: 'Pacifico', cursive; /* Handwritten font style */
+  font-size: 2.0rem; /* Adjust font size */
+  margin-top: 2rem; /* Add space above the section */
+}
+
+/* Ensure font is loaded */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+	</style>
+  <!-- HTML -->
+<section class="contact-section">
+  <div class="contact-container">
+    <!-- Left Section: Contact Information -->
+    <div class="contact-info">
+      <h2>Contact Information</h2>
+      <p><strong>Address:</strong> Nairobi West ward, Nairobi County, Kenya</p>
+	  <p><strong>Phone:</strong> +254 745 983135 / +254 100 256849</p>
+      <p><strong>Email:</strong> <a href="mailto:samuelbarasa55@gmail.com">samuelbarasa55@gmail.com</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/SammieBarasa77" target="_blank">SammieBarasa77</a></p>
+      <p><strong>Tableau Public:</strong> <a href="https://public.tableau.com/app/profile/samuel.barasa/vizzes" target="_blank">View My Visualization Collection</a></p>
+      <div class="social-media">
+        <strong>Follow Me:</strong>
+        <a href="https://www.instagram.com/sammie_barasa/" target="_blank">Instagram</a> |
+        <a href="https://www.linkedin.com/in/samuel-barasa/" target="_blank">LinkedIn</a> |
+        <a href="https://www.facebook.com/sammizmakokha.almarioz" target="_blank">Facebook</a>
+      </div>
+    </div>
+
+    <!-- Right Section: Picture -->
+    <div class="contact-photo">
+		<img src="images/GMP_0815.jpg" alt="Your Picture">
+    </div>
+  </div>
+</section>
+
+<style>
+  /* CSS */
+  .contact-section {
+    background-color: #312b2b;
+    padding: 3rem 2rem;
+    font-family: Arial, sans-serif;
+  }
+
+  .contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+  }
+
+  /* Left Section */
+  .contact-info {
+    flex: 1;
+    max-width: 50%;
+    color: #747171;
+  }
+
+  .contact-info h2 {
+    font-size: 2rem;
+    color: #ec7d5b;
+    margin-bottom: 1rem;
+  }
+
+  .contact-info p,
+  .contact-info a {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-decoration: none;
+    color: #afaeae;
+  }
+
+  .contact-info a:hover {
+    text-decoration: underline;
+    color: hsl(9, 72%, 66%);
+  }
+
+  .social-media {
+    margin-top: 1rem;
+  }
+
+  .social-media a {
+    font-size: 1rem;
+    color: #555;
+    text-decoration: none;
+    margin-right: 0.5rem;
+  }
+
+  .social-media a:hover {
+    color: hsl(9, 72%, 66%);
+  }
+
+  /* Right Section */
+  .contact-photo {
+    flex: 1;
+    max-width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-photo img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .contact-info {
+      max-width: 100%;
+    }
+
+    .contact-photo {
+      max-width: 100%;
+    }
+
+    .contact-photo img {
+      max-width: 200px;
+    }
+  }
+</style>
+
+<!-- Back to Top Button -->
+<div class="back-to-top-wrapper">
+	<button id="back-to-top" title="Go to top">Back to the Top</button>
+  </div>
+  
+
+<style>
+/* Wrapper for positioning the button at the bottom */
+.back-to-top-wrapper {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  margin-top: 20px; /* Add space above the button */
+}
+
+/* Styling for the Back to Top button */
+#back-to-top {
+  background-color: #007bff; /* Initial button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s ease-in-out;
+}
+
+#back-to-top:hover {
+  background-color: #0056b3; /* Hover effect color */
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+</style>
+
+<script>
+// Smooth scroll to the top when the button is clicked
+document.getElementById('back-to-top').addEventListener('click', function() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' // Smooth scrolling effect
+  });
+});
+
+
+</script>
+</body>
+<footer class="footer">
+	<div class="footer-container">
+	  <p>&copy; <span id="year-range"></span> | Almario Analytics | All Rights Reserved.</p>
+	</div>
+  </footer>
+  
+  <script>
+	// Dynamically set the copyright year range
+	const startYear = 2023; // Year the company was founded
+	const currentYear = new Date().getFullYear();
+	const yearRange = startYear === currentYear ? `${currentYear}` : `${startYear} - ${currentYear}`;
+	document.getElementById("year-range").textContent = yearRange;
+  </script>
+  
+  <style>
+  /* Footer Styling */
+  .footer {
+	background-color: #333030; /* Dark background */
+	color: #ffffff; /* White text color */
+	padding: 1rem 0;
+	width: 100%;
+	text-align: center; /* Center the text horizontally */
+	display: flex; /* Use flexbox for centering */
+	align-items: center; /* Center vertically */
+	justify-content: center; /* Center horizontally */
+  }
+  
+  .footer-container {
+	font-size: 0.9rem;
+	font-family: Arial, sans-serif;
+  }
+  </style>
+  
+
+
+</html>
